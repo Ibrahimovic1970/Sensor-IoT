@@ -29,4 +29,11 @@ class SensorController extends Controller
 
         return redirect()->route('sensor.index')->with('success', 'Data sensor berhasil ditambahkan!');
     }
+
+    public function destroy(Sensor $sensor)
+    {
+        $sensor->delete();
+
+        return redirect()->route('sensor.index')->with('success', 'Data sensor berhasil dihapus!');
+    }
 }

@@ -11,12 +11,12 @@
 
             <div class="mb-3">
                 <label for="nama_sensor" class="form-label">Nama Sensor</label>
-                <input type="text" name="nama_sensor" id="nama_sensor" class="form-control" required placeholder="Contoh: Sensor 1">
+                <input type="text" name="nama_sensor" id="nama_sensor" class="form-control" required placeholder="Contoh: Sensor DHT, Sensor Kelembaban, Sensor Cahaya">
             </div>
 
             <div class="mb-3">
                 <label for="data" class="form-label">Data</label>
-                <input type="number" name="data" id="data" class="form-control" required placeholder="Contoh: 30">
+                <input type="number" name="data" id="data" class="form-control" required placeholder="Contoh: 25 (untuk suhu), 60 (untuk kelembaban)">
             </div>
 
             <div class="d-flex gap-2">

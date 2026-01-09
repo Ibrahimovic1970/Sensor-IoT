@@ -10,3 +10,4 @@ Route::get('/', function () {
 Route::get('/sensor', [SensorController::class, 'index'])->name('sensor.index');
 Route::get('/sensor/create', [SensorController::class, 'create'])->name('sensor.create');
 Route::post('/sensor', [SensorController::class, 'store'])->name('sensor.store');
+Route::delete('/sensor/{sensor}', [SensorController::class, 'destroy'])->name('sensor.destroy');

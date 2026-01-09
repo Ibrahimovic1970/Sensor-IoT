@@ -21,13 +21,28 @@
                         <tr>
                             <th>Nama Sensor</th>
                             <th>Data</th>
+                            <th>Aksi</th>
                         </tr>
                     </thead>
                     <tbody>
                         @foreach($sensors as $sensor)
                             <tr>
                                 <td>{{ $sensor->nama_sensor }}</td>
-                                <td>{{ $sensor->data }}</td>
+                                <td>
+                                    {{ $sensor->data }}
+                                    @if($sensor->unit)
+                                        <span class="text-muted ms-1">{{ $sensor->unit }}</span>
+                                    @endif
+                                </td>
+                                <td>
+                                    <form action="{{ route('sensor.destroy', $sensor) }}" method="POST" onsubmit="return confirm('Yakin ingin menghapus sensor ini?')">
+                                        @csrf
+                                        @method('DELETE')
+                                        <button type="submit" class="btn btn-sm btn-outline-danger">
+                                            <i class="bi bi-x-circle"></i> Hapus
+                                        </button>
+                                    </form>
+                                </td>
                             </tr>
                         @endforeach
                     </tbody>
