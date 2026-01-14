@@ -11,10 +11,10 @@ return new class extends Migration
      */
     public function up()
 {
-    Schema::create('sensors', function (Blueprint $table) {
+     Schema::create('sensors', function (Blueprint $table) {
         $table->id();
         $table->string('nama_sensor');
-        $table->integer('data');
+        $table->string('data');
         $table->timestamps();
     });
 }
